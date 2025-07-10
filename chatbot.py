@@ -10,7 +10,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 def get_bot_response(query: str) -> str:
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",  # Or "gpt-4"
+            model="gpt-3.5-turbo",  
             messages=[
                 {"role": "system", "content": "You are a helpful customer support chatbot for an e-commerce website."},
                 {"role": "user", "content": query},
